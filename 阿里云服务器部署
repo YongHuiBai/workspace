@@ -24,6 +24,12 @@ pip install flask
 11.安装nginx
 sudo apt-get install nginx  安装启动 service nginx start 如果遇到端口被占用kill 掉80端口，从新执行命令
 成功后可以在浏览器输入ip地址看到welcome to nginx!
+12.安装git
+sudo apt-get install git
+13.安装mysql-python
+sudo apt-get install python-pip python-dev libmysqlclient-dev
+
+pip install MySQL-python
 
 二、
 1. 配置falsk项目。 
@@ -37,6 +43,7 @@ pythonpath = /root/workspace/Flask_demo //指明当前应用程序的项目路�
 module = hello // 程序的入口文件名
 callable = app //应用程序中指明的uwsgi需要调用的应用程序
 memory-report = true //开启内存报告
+pidfile = /tmp/uwsgi.pid //设置pid
 3.修改nginx 文件 命令 vi /etc/nginx/sites-available/default   修改内容如下：
 server_name  xx.xx.xx.xx;
 location  中添加两行

@@ -1,0 +1,1 @@
+celery -A 这里填写任务py路径 worker --loglevel=info
